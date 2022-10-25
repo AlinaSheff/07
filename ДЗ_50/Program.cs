@@ -27,17 +27,12 @@ for(int i = 0; i < m; i++)
 
 Console.Write("Введите число: ");
 int a = Convert.ToInt32(Console.ReadLine());
-int count = 0;
+string result = "Числа в массиве нет";
 for  (int i = 0; i < m; i++)
 {
     for (int j = 0; j < n; j++)
     {
-        while (count == 0)
-        {
-            if  (array[i, j] == a) Console.Write($"Число {a} есть в массиве");
-            else if (count == 0) Console.Write($"Числа {a} нет в массиве");
-            count++;
-        }
-
+        if  (array[i, j] == a) result = "Число есть в массиве";
     }
 }
+Console.WriteLine(result);
